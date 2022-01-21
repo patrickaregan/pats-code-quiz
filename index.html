@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body onload="hideQuiz()">
+
+    <!-- Header -->
     <header>
         <nav>
             <a href="./high-scores.html">View high scores</a>
         </nav>
         <div>Time: 0</div>
     </header>
+
+    <!-- Start Page -->
     <div class="start-page">
         <section>
             <h1>Pat's Coding Quiz Challenge</h1>
@@ -23,31 +27,40 @@
                 answers will penalize your score/time by ten seconds!
             </p>
             <div>
-                <button name="start-quiz" onclick="showQuiz()">Start Quiz</button>
+                <button name="start-quiz" onclick="startQuiz()">Start Quiz</button>
             </div>
         </section>
     </div>
-    <div class="quiz">
+
+    <!-- Question 1 -->
+    <div class="question question01">
         <section>
-            <p>Question</p>
+            <h1>Commonly used data types DO Not include:</h1>
+            <ul>
+                <li>1. strings</li>
+                <li>2. booleans</li>
+                <li>3. alerts</li>
+                <li>4. numbers</li>
+            </ul>
         </section>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question question02">
         <section>
-            <ol>
-                <li>
-                    Answer
-                </li>
-                <li>
-                    Answer
-                </li>
-                <li>
-                    Answer
-                </li>
-            </ol>
-        </section>
-        <section>
+            <h1>The condition in an if / else statement is enclosed with __________.</h1>
+            <ul>
+                <li>1. quotes</li>
+                <li>2. curly brackets</li>
+                <li>3. parenthesis</li>
+                <li>4. square brackets</li>
+            </ul>
             <p>Result</p>
         </section>
     </div>
+
+
+    <!-- Scripts -->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

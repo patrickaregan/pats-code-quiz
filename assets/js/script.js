@@ -1,15 +1,15 @@
 
-var hideQuiz = function() {
-    console.log("hiding quiz...");
-    var quizEl = document.querySelector(".quiz");
-    quizEl.style.display = "none";
+// Object to hold game related data
+var gameState = {
+    questionIndex: 0
 }
 
-var showQuiz = function() {
-    console.log("showing quiz...");
-    hideStartPage();
-    var quizEl = document.querySelector(".quiz");
-    quizEl.style.display = "flex";
+var hideQuiz = function() {
+    console.log("hiding quiz...");
+    var question01 = document.querySelector(".question01");
+    var question02 = document.querySelector(".question02");
+    question01.style.display = "none";
+    question02.style.display = "none";
 }
 
 var hideStartPage = function() {
@@ -18,6 +18,18 @@ var hideStartPage = function() {
     startPageEl.style.display = "none";
 
 }
+
+var startQuiz = function() {
+    console.log("starting quiz...");
+    hideStartPage();
+    var question01 = document.querySelector(".question01");
+    var question02 = document.querySelector(".question02");
+    question01.style.display = "flex";
+    gameState.questionIndex = 1;
+    console.log("GameState.QuestionIndex: " + gameState.questionIndex);
+}
+
+
 
 /* High Scores */
 

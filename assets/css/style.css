@@ -3,6 +3,7 @@
     --buttonBG: #351c75;
     --buttonBGHover: #bd60e7;
     --highScoreItem: #d9d3e9;
+    --questionResult: #d8d7d8;
 }
 
 *,
@@ -14,13 +15,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 /* end Global */
 
 
 
 /* Header */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -35,13 +34,11 @@ header nav a {
 header nav a:hover {
     color: var(--buttonBGHover);
 }
-
 /* end Header */
 
 
 
 /* Start Page */
-
 .start-page section {
     display: flex;
     flex-direction: column;
@@ -49,12 +46,12 @@ header nav a:hover {
 }
 
 .start-page h1 {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 5px 0;
 }
 
 .start-page p {
     text-align: center;
-    width: 50%;
+    width: 500px;
     line-height: 1.25em;
 }
 
@@ -73,28 +70,69 @@ header nav a:hover {
 .start-page button:hover {
     background-color: var(--buttonBGHover);
 }
-
 /* end Start Page */
 
 
 
-/* end Quiz */
+/* Question */
+.question {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
 
-/* end Quiz */
+.question section {
+    align-items: center;
+    width: 500px;
+}
+
+.question h1 {
+    margin: 20px 0 10px 0;
+}
+
+.question ul {
+    margin: 0 150px 0 0;
+    padding: 0;
+}
+
+.question ul li {
+    list-style: none;
+    background-color: var(--buttonBG);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: left;
+    font-size: 13px;
+    margin: 5px 150px 5px 0;
+    border-radius: 6px;
+
+}
+
+.question ul li:hover {
+    background-color: var(--buttonBGHover);
+}
+
+.question p {
+    color: var(--questionResult);
+    border-top: 2px solid var(--questionResult);
+    margin-top: 25px;
+    padding: 10px 0 0 0;
+    font-style: italic;
+}
+/* end Question */
 
 
 
 /* High Scores */
-
 .high-scores {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 55px;
 }
 
 .high-scores section {
     align-items: flex-start;
+    width: 500px;
 }
 
 .high-scores h1 {
@@ -127,5 +165,4 @@ header nav a:hover {
 .high-scores button:hover {
     background-color: var(--buttonBGHover);
 }
-
 /* end High Scores */
