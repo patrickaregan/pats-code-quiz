@@ -7,21 +7,45 @@
     <title>Pat's Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
+<body onload="hideQuiz()">
     <header>
         <nav>View high scores</nav>
         <div>Time: 0</div>
     </header>
-    <section>
-        <h1>Coding Quiz Challenge</h1>
-        <p>
-            Try to answer the following code-related questions
-            within the time limit. Keep in mind that incorrect
-            answers will penalize your score/time by ten seconds!
-        </p>
-        <div>
-            <button name="start-quiz">Start Quiz</button>
-        </div>
-    </section>
+    <div class="start-page">
+        <section>
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                Try to answer the following code-related questions
+                within the time limit. Keep in mind that incorrect
+                answers will penalize your score/time by ten seconds!
+            </p>
+            <div>
+                <button name="start-quiz" onclick="showQuiz()">Start Quiz</button>
+            </div>
+        </section>
+    </div>
+    <div class="quiz">
+        <section>
+            <p>Question</p>
+        </section>
+        <section>
+            <ol>
+                <li>
+                    Answer
+                </li>
+                <li>
+                    Answer
+                </li>
+                <li>
+                    Answer
+                </li>
+            </ol>
+        </section>
+        <section>
+            <p>Result</p>
+        </section>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
