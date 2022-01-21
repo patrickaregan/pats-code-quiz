@@ -1,6 +1,8 @@
+/* Global */
 :root {
     --buttonBG: #351c75;
     --buttonBGHover: #bd60e7;
+    --highScoreItem: #d9d3e9;
 }
 
 *,
@@ -12,6 +14,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* end Global */
+
+
 
 /* Header */
 
@@ -72,7 +78,40 @@ header nav a:hover {
 
 
 
+/* end Quiz */
+
+/* end Quiz */
+
+
+
 /* High Scores */
+
+.high-scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.high-scores section {
+    align-items: flex-start;
+}
+
+.high-scores h1 {
+    margin: 20px 0 10px 0;
+    padding-left: 38px;
+}
+
+.high-scores ul li {
+    background-color: var(--highScoreItem);
+    list-style: none;
+    padding: 5px;
+}
+
+.high-scores div {
+    padding-left: 38px;
+}
+
 .high-scores button {
     background-color: var(--buttonBG);
     border: none;
@@ -81,7 +120,7 @@ header nav a:hover {
     text-align: center;
     display: inline-block;
     font-size: 13px;
-    margin: 5px;
+    margin: 2px;
     border-radius: 6px;
 }
 
