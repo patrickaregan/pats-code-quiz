@@ -118,6 +118,7 @@ header nav a:hover {
     margin-top: 25px;
     padding: 10px 0 0 0;
     font-style: italic;
+    font-size: 24px;
 }
 /* end Question */
 
@@ -136,25 +137,30 @@ header nav a:hover {
 }
 
 .high-scores h1 {
-    margin: 20px 0 10px 0;
-    padding-left: 38px;
+    margin: 20px 0 15px 0;
+}
+
+.high-scores ul {
+    margin: 0;
+    padding: 0;
 }
 
 .high-scores ul li {
     background-color: var(--highScoreItem);
     list-style: none;
-    padding: 5px;
+    margin-top: 5px;
+    padding: 6px;
 }
 
 .high-scores div {
-    padding-left: 38px;
+    margin-top: 20px;
 }
 
 .high-scores button {
     background-color: var(--buttonBG);
     border: none;
     color: white;
-    padding: 8px 20px;
+    padding: 6px 15px;
     text-align: center;
     display: inline-block;
     font-size: 13px;
