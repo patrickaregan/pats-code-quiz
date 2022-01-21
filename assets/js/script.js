@@ -18,3 +18,9 @@ var hideStartPage = function() {
     startPageEl.style.display = "none";
 
 }
+
+/* High Scores */
+
+var goBackToQuiz = function() {
+    window.location.href = "./index.html";
+}
