@@ -3,6 +3,10 @@ var goBackToQuiz = function() {
     window.location.href = "./index.html";
 }
 
+var clearHighScores = function() {
+    localStorage.clear();
+    location.reload();
+}
 
 // get high scores
 var loadHighScores = function() {
