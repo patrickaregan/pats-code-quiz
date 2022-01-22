@@ -1,4 +1,3 @@
-
 // Object to hold game state
 var gameState = {
     questionIndex: 0,
@@ -9,6 +8,27 @@ var gameState = {
     question04Result: "You got the previous question WRONG! Try harder on this one.",
     question05Result: "You got the previous question WRONG!",
     questionValue: 20
+}
+
+// variable array to hold high scores
+var highScores = [];
+
+// function to load high scores
+var loadHighScores = function() {
+    highScores = localStorage.getItem("high-scores");
+    
+    if (!highScores) {
+        highScores = [];
+        return false;
+    }
+
+    highScores = JSON.parse(highScores);
+    
+    
+    for (var i = 0; i < highScores.length; i++) {
+        console.log(highScores[i]);
+    }
+
 }
 
 // Functions to show or hide the sections
@@ -186,12 +206,26 @@ var handleQuestion05 = function(event) {
 // function for handling the form
 var handleFormSubmit = function() {
     var initialsEl = document.querySelector("#initials");
+    var initials = initialsEl.value;
     var finalScore = gameState.correctAnswers * gameState.questionValue;
-    console.log(initialsEl.value + " - " + finalScore);
+    console.log(initials + " - " + finalScore);
     if (!initialsEl.value) {
         window.alert("Please enter your initials!");
     } else {
-        //TODO: add code to add high score to local storage.
+        var highScore = {
+            initials: initialsEl.value,
+            score: finalScore
+        }
+        // add score to end of array
+        highScores.push(highScore);
+        // Sort the array before adding to local storage
+        highScores.sort(function (a, b) {
+            return a.score - b.score;
+        })
+        // Reverse the array before adding to local storage so that the highest values are on top.
+        highScores.reverse();
+        // Add to local storage
+        localStorage.setItem("high-scores", JSON.stringify(highScores));
         window.location.href = "./high-scores.html"
     }
 }
@@ -209,3 +243,5 @@ question02El.addEventListener("click", handleQuestion02);
 question03El.addEventListener("click", handleQuestion03);
 question04El.addEventListener("click", handleQuestion04);
 question05El.addEventListener("click", handleQuestion05);
+
+loadHighScores();
