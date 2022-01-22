@@ -2,10 +2,10 @@
 var gameState = {
     questionIndex: 0,
     correctAnswers: 0,
-    question01Result: "You got the previous question WRONG! Try harder on this one.",
-    question02Result: "You got the previous question WRONG! Try harder on this one.",
-    question03Result: "You got the previous question WRONG! Try harder on this one.",
-    question04Result: "You got the previous question WRONG! Try harder on this one.",
+    question01Result: "You got the previous question WRONG! Subtracting 10 seconds.",
+    question02Result: "You got the previous question WRONG! Subtracting 10 seconds.",
+    question03Result: "You got the previous question WRONG! Subtracting 10 seconds.",
+    question04Result: "You got the previous question WRONG! Subtracting 10 seconds.",
     question05Result: "You got the previous question WRONG!",
     questionValue: 20,
     timeLeft: 75,
@@ -85,9 +85,10 @@ var handleQuestion01 = function(event) {
     if (answer == 3) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question01Result = "You got the previous question CORRECT! Keep going.";
+        gameState.question01Result = "Good work! You got the previous question CORRECT!";
     } else {
         console.log("You got the answer wrong!");
+        gameState.timeLeft -= 10;
     }
     // Now move to the next question
     // advance game state to next question
@@ -112,9 +113,10 @@ var handleQuestion02 = function(event) {
     if (answer == 3) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question02Result = "You got the previous question CORRECT! Keep going.";
+        gameState.question02Result = "Way to go! You got the previous question CORRECT.";
     } else {
         console.log("You got the answer wrong!");
+        gameState.timeLeft -= 10;
     }
     // Now move to the next question
     // advance game state to next question
@@ -139,9 +141,10 @@ var handleQuestion03 = function(event) {
     if (answer == 2) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question03Result = "You got the previous question CORRECT! Keep going.";
+        gameState.question03Result = "Keep it up! You got the previous question CORRECT!";
     } else {
         console.log("You got the answer wrong!");
+        gameState.timeLeft -= 10;
     }
     // Now move to the next question
     // advance game state to next question
@@ -166,9 +169,10 @@ var handleQuestion04 = function(event) {
     if (answer == 4) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question04Result = "You got the previous question CORRECT! Keep going.";
+        gameState.question04Result = "Nice one! You got the previous question CORRECT!";
     } else {
         console.log("You got the answer wrong!");
+        gameState.timeLeft -= 10;
     }
     // Now move to the next question
     // advance game state to next question
@@ -193,9 +197,10 @@ var handleQuestion05 = function(event) {
     if (answer == 1) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question05Result = "You got the previous question CORRECT!";
+        gameState.question05Result = "Excellent! You got the previous question CORRECT!";
     } else {
         console.log("You got the answer wrong!");
+        gameState.timeLeft -= 10;
     }
     // Now move to the next question
     // advance game state to next question
