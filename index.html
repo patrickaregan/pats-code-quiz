@@ -108,11 +108,11 @@
     <div class="all-done">
         <section>
             <h1>All done!</h1>
-            <form>
-                <span class="final-score"></span>
-                <label>Enter initials</label>
-                <input type="text" placeholder="enter your initials" />
-                <input type="submit" value="Submit" />
+            <span class="final-score"></span>
+            <form name="all-done-form" onsubmit="event.preventDefault(); handleFormSubmit()">
+                <label for="initials">Enter initials:</label>
+                <input type="text" placeholder="your initials" name="initials" id="initials" class="form-input" />
+                <button type="submit" id="submit-final-score">Submit</button>
             </form>
             <p id="question05Result"></p>
         </section>

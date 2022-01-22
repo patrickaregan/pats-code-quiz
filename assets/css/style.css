@@ -124,6 +124,65 @@ header nav a:hover {
 
 
 
+/* All Done */
+.all-done {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.all-done section {
+    align-items: center;
+    width: 500px;
+}
+
+.all-done h1 {
+    margin: 20px 0 10px 0;
+}
+
+.all-done .final-score {
+    font-size: 16px;
+}
+
+.all-done form {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.all-done .form-input {
+    border: 1px solid var(--questionResult);
+    font-size: 16px;
+    padding: 5px 5px;
+}
+
+.all-done button {
+    background-color: var(--buttonBG);
+    border: none;
+    color: white;
+    padding: 6px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.all-done button:hover {
+    background-color: var(--buttonBGHover);
+}
+
+.all-done p {
+    color: var(--questionResult);
+    border-top: 2px solid var(--questionResult);
+    margin-top: 25px;
+    padding: 10px 0 0 0;
+    font-style: italic;
+    font-size: 24px;
+}
+/* end All Done */
+
+
+
 /* High Scores */
 .high-scores {
     display: flex;

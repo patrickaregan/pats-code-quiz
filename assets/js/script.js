@@ -32,7 +32,6 @@ var hideStartPage = function() {
     //console.log("hiding start page...");
     var startPageEl = document.querySelector(".start-page");
     startPageEl.style.display = "none";
-
 }
 
 var startQuiz = function() {
@@ -182,14 +181,24 @@ var handleQuestion05 = function(event) {
     var finalScoreEl = document.querySelector(".final-score");
     finalScoreEl.innerText = "Your final score is " + finalScore + ".";
 }
+// end functions to handle the answers to the questions
 
-
-/* High Scores */
-
-var goBackToQuiz = function() {
-    window.location.href = "./index.html";
+// function for handling the form
+var handleFormSubmit = function() {
+    var initialsEl = document.querySelector("#initials");
+    var finalScore = gameState.correctAnswers * gameState.questionValue;
+    console.log(initialsEl.value + " - " + finalScore);
+    if (!initialsEl.value) {
+        window.alert("Please enter your initials!");
+    } else {
+        //TODO: add code to add high score to local storage.
+        window.location.href = "./high-scores.html"
+    }
 }
 
+
+// Add event listeners
+// questions
 var question01El = document.querySelector(".question01");
 var question02El = document.querySelector(".question02");
 var question03El = document.querySelector(".question03");
