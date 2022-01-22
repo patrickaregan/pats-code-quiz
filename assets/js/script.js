@@ -7,8 +7,26 @@ var gameState = {
     question03Result: "You got the previous question WRONG! Try harder on this one.",
     question04Result: "You got the previous question WRONG! Try harder on this one.",
     question05Result: "You got the previous question WRONG!",
-    questionValue: 20
+    questionValue: 20,
+    timeLeft: 75,
+    timerInterval: 1000
 }
+
+var timerEl = document.querySelector("#timer");
+timerEl.innerHTML = "Time: " + gameState.timeLeft;
+
+// Timer
+var timeReview = function() {
+    //console.log("Time remaining: " + gameState.timeLeft);
+    gameState.timeLeft--;
+    timerEl.innerHTML = "Time: " + gameState.timeLeft;
+    if (gameState.timeLeft < 1) {
+        gameOver();
+    }
+}
+
+var timerIntervalID = "";
+
 
 // variable array to hold high scores
 var highScores = [];
@@ -23,11 +41,6 @@ var loadHighScores = function() {
     }
 
     highScores = JSON.parse(highScores);
-    
-    
-    for (var i = 0; i < highScores.length; i++) {
-        console.log(highScores[i]);
-    }
 
 }
 
@@ -61,6 +74,7 @@ var startQuiz = function() {
     question01.style.display = "flex";
     gameState.questionIndex = 1;
     console.log("You are on question: " + gameState.questionIndex);
+    timerIntervalID = setInterval(timeReview, gameState.timerInterval);
 }
 
 
@@ -200,6 +214,8 @@ var handleQuestion05 = function(event) {
     var finalScore = gameState.correctAnswers * gameState.questionValue;
     var finalScoreEl = document.querySelector(".final-score");
     finalScoreEl.innerText = "Your final score is " + finalScore + ".";
+    // Clear the timer interval
+    clearInterval(timerIntervalID);
 }
 // end functions to handle the answers to the questions
 
@@ -208,7 +224,7 @@ var handleFormSubmit = function() {
     var initialsEl = document.querySelector("#initials");
     var initials = initialsEl.value;
     var finalScore = gameState.correctAnswers * gameState.questionValue;
-    console.log(initials + " - " + finalScore);
+    //console.log(initials + " - " + finalScore);
     if (!initialsEl.value) {
         window.alert("Please enter your initials!");
     } else {
@@ -228,6 +244,26 @@ var handleFormSubmit = function() {
         localStorage.setItem("high-scores", JSON.stringify(highScores));
         window.location.href = "./high-scores.html"
     }
+}
+
+// function for game over due to running out of time.
+var gameOver = function() {
+    // Clear the timer interval
+    clearInterval(timerIntervalID);
+    // hide everything
+    hideQuiz()
+    hideStartPage();
+    // show the all done section
+    var allDone = document.querySelector(".all-done");
+    allDone.style.display = "flex";
+    // Show the final score
+    var finalScore = gameState.correctAnswers * gameState.questionValue;
+    var finalScoreEl = document.querySelector(".final-score");
+    finalScoreEl.innerText = "Your final score is " + finalScore + ".";
+    // Clear the timer interval
+    clearInterval(timerIntervalID);
+
+
 }
 
 
