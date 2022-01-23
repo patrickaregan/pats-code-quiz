@@ -85,7 +85,7 @@ var handleQuestion01 = function(event) {
     if (answer == 3) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question01Result = "Good work! You got the previous question CORRECT!";
+        gameState.question01Result = "You got the previous question CORRECT! Good job!";
     } else {
         console.log("You got the answer wrong!");
         gameState.timeLeft -= 10;
@@ -113,7 +113,7 @@ var handleQuestion02 = function(event) {
     if (answer == 3) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question02Result = "Way to go! You got the previous question CORRECT.";
+        gameState.question02Result = "You got the previous question CORRECT. Way to go!";
     } else {
         console.log("You got the answer wrong!");
         gameState.timeLeft -= 10;
@@ -141,7 +141,7 @@ var handleQuestion03 = function(event) {
     if (answer == 2) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question03Result = "Keep it up! You got the previous question CORRECT!";
+        gameState.question03Result = "You got the previous question CORRECT! Keep up the good work!";
     } else {
         console.log("You got the answer wrong!");
         gameState.timeLeft -= 10;
@@ -169,7 +169,7 @@ var handleQuestion04 = function(event) {
     if (answer == 4) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question04Result = "Nice one! You got the previous question CORRECT!";
+        gameState.question04Result = "You got the previous question CORRECT! Excellent!";
     } else {
         console.log("You got the answer wrong!");
         gameState.timeLeft -= 10;
@@ -197,7 +197,7 @@ var handleQuestion05 = function(event) {
     if (answer == 1) {
         console.log("You got the answer correct!");
         gameState.correctAnswers++;
-        gameState.question05Result = "Excellent! You got the previous question CORRECT!";
+        gameState.question05Result = "You got the previous question CORRECT! Awesome!";
     } else {
         console.log("You got the answer wrong!");
         gameState.timeLeft -= 10;
