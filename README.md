@@ -18,6 +18,6 @@ Pat's Code Quiz
 
 
 ## Link
-[https://patrickaregan.github.io/pats-coding-quiz/](https://patrickaregan.github.io/pats-coding-quiz/)
+[https://patrickaregan.github.io/pats-code-quiz/](https://patrickaregan.github.io/pats-code-quiz/)
 
 
