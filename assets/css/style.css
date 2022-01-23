@@ -238,4 +238,20 @@ header nav a:hover {
         width: 300px;
     }
 
+    .question section {
+        width: 300px;
+    }
+    
+    .question ul {
+        margin: 0 0 0 0;
+    }
+
+    .all-done section {
+        width: 300px;
+    }
+
+    .high-scores section {
+        width: 300px;
+    }
+
 }
