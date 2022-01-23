@@ -231,3 +231,11 @@ header nav a:hover {
     background-color: var(--buttonBGHover);
 }
 /* end High Scores */
+
+@media screen and (max-width: 500px) {
+
+    .start-page p {
+        width: 300px;
+    }
+
+}
