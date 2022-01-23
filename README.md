@@ -1,5 +1,5 @@
 # patrickaregan.github.io/pats-code-quiz
-Pat's Code Quiz
+Pat's Coding Quiz Challenge
 
 ## Description
 - This project is a coding quiz built with HTML, CSS and JavaScript.
